@@ -1,39 +1,13 @@
-<!DOCTYPE >
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <title>CSS3 Perspective Playground</title>
-    <link rel="stylesheet" type="text/css" href="main.css" />
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
   </head>
-
   <body>
-    <div id="app">
-      <h2>CSS3 Perspective Playground</h2>
-      <main>
-        <section class="settings">
-          <div class="settings-container">
-            <label>perspective: {{ perspective }}px;</label>
-            <input type="range" min="0" max="999" v-model="perspective" />
-
-            <label>rotateX: {{ rotateX }}deg; </label>
-            <input type="range" min="-180" max="180" v-model="rotateX" />
-
-            <label>rotateY: {{ rotateY }}deg; </label>
-            <input type="range" min="-180" max="180" v-model="rotateY" />
-
-            <label>rotateZ: {{ rotateZ }}deg; </label>
-            <input type="range" min="-180" max="180" v-model="rotateZ" />
-
-            <button type="button" @click.prevent="reset">Reset</button>
-            <button type="button" @click.prevent="copy">Copy</button>
-          </div>
-        </section>
-        <section class="output">
-          <div class="box-container">
-            <div class="box" :style="box"></div>
-          </div>
-        </section>
-      </main>
-    </div>
+    <div id="app"></div>
 
     <css-doodle>
       :doodle { @grid: 1x3 / 100vmax; position: absolute; top: 0; left: 0;
@@ -46,7 +20,6 @@
     </css-doodle>
 
     <script src="https://unpkg.com/css-doodle@0.6.1/css-doodle.min.js"></script>
-    <script src="https://unpkg.com/vue@3"></script>
-    <script src="app.js"></script>
+    <script type="module" src="/src/main.js"></script>
   </body>
 </html>
